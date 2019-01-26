@@ -1,29 +1,17 @@
 fileFormatVersion: 2
-guid: 52e29cdbb2fcd354f8b789fe9ba5b5a3
+guid: f21bf05962f7e6b459d35ae2e89e12f2
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Wall1
-    100004: Wall2
-    100006: Wall3
     400000: //RootNode
-    400002: Wall1
-    400004: Wall2
-    400006: Wall3
-    2100000: Material
-    2300000: Wall1
-    2300002: Wall2
-    2300004: Wall3
-    3300000: Wall1
-    3300002: Wall2
-    3300004: Wall3
-    4300000: Wall3
-    4300002: Wall2
-    4300004: Wall1
+    2100000: Bark
+    2100002: Leaf
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Tree
     7400000: Default Take
     9500000: //RootNode
-    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
