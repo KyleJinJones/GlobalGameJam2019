@@ -16,7 +16,7 @@ public class Placement : MonoBehaviour
 
     public void Place()
     {
-           
+        
         r.material.color = c;
         placed = true;
         
