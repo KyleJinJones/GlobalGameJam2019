@@ -517,7 +517,7 @@ GameObject:
   - component: {fileID: 817634989}
   - component: {fileID: 817634988}
   m_Layer: 0
-  m_Name: Wall (1)
+  m_Name: notawall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
