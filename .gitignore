@@ -23,6 +23,8 @@ ExportedObj/
 *.svd
 *.pdb
 *.opendb
+*.blend1
+*.blend1.meta
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -34,3 +36,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# Test scenes
+GlobalGameJam2019/Assets/Scenes/RogerTest.unity
+GlobalGameJam2019/Assets/Scenes/RogerTest.unity.meta
