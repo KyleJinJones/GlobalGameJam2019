@@ -28,14 +28,15 @@ public class ResourceHarvesting : MonoBehaviour
                 Debug.Log("CANNOT HARVEST ITEM; CURRENTLY CARRYING ITEM");
             } else {
                 timer = timer - Time.deltaTime;
+                Debug.Log(timer);
+                if(timer <= 0) {
+                    Debug.Log("ITEM HARVESTED");
+                    inventory.carried = rawMaterial;
+                    timer = HARVEST_TIME;
+                }
             }
         }
 
-         if(timer <= 0) {
-            Debug.Log("ITEM HARVESTED");
-            inventory.carried = rawMaterial;
-            timer = HARVEST_TIME;
-        }
     }
 
 }
