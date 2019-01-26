@@ -16,4 +16,9 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector3(Input.GetAxis("Horizontal")*speed, 0, Input.GetAxis("Vertical") * speed);
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        
+    }
 }
