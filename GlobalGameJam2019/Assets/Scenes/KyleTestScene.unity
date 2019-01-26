@@ -426,7 +426,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760386715}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: b8739df5a75fcef4e97f8aaf2deb3ee6, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -504,6 +504,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  Maxspeed: 10
+  Minspeed: 0
+  accerleration: 1
 --- !u!114 &760386722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -517,6 +520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carried: {fileID: 0}
+  scale: 0
 --- !u!4 &784233893 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1825044039, guid: dca7213d2d1e83d45b204dd35de0a51a,
