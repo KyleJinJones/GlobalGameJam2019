@@ -14,8 +14,9 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector3(Input.GetAxis("Horizontal")*speed, 0, Input.GetAxis("Vertical") * speed);
+        rb.velocity = Vector3.Normalize(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"))) * speed;
     }
+   
 
     private void OnTriggerStay(Collider other)
     {
