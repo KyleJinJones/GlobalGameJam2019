@@ -44,11 +44,11 @@ public class PlacementManager : MonoBehaviour
                 }
             }
 
-            //Once the closest wall has been found, check player distance from it
-            //If it is close enough, highlight it, or if they press e, place the wall
-            if (least <= mindistance)
-            {
-                
+        //Once the closest wall has been found, check player distance from it
+        //If it is close enough, highlight it, or if they press e, place the wall
+        if (least <= mindistance)
+        {
+
             if (Input.GetKeyDown(KeyCode.E))
             {
                 closest.Place();
@@ -60,16 +60,17 @@ public class PlacementManager : MonoBehaviour
                 closest = null;
             }
 
-        }
+
 
             else
             {
                 closest.Highlight();
             }
+        }
             }
            
         
->>>>>>> Stashed changes
+
 
     }
-}
+

@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     private float pre_x_dir = 0;
     private float pre_z_dir = 0;
 
+    private float angle=0;
+
     void Start()
     {
         rb=GetComponent<Rigidbody>();
@@ -23,9 +25,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.Rotate(new Vector3(0, -angle, 0));
         x_dir = Input.GetAxisRaw("Horizontal");
         z_dir = Input.GetAxisRaw("Vertical");
-
+        angle = Vector3.Angle(new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")), Vector3.forward);
+        transform.Rotate(new Vector3(0,angle,0));
         if (x_dir != 0) pre_x_dir = x_dir;
         
         if (z_dir != 0) pre_z_dir = z_dir;
