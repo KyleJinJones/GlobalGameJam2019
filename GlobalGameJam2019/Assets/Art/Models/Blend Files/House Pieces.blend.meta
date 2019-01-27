@@ -17,6 +17,8 @@ ModelImporter:
     400010: Doorway1
     2100000: Material
     2100002: WallMat
+    2100004: zDoor
+    2100006: zWallMat
     2300000: Wall1
     2300002: Wall2
     2300004: Wall3
