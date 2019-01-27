@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Lvl1Revamped.unity
     guid: fddc64f57fd772148821ab4df4c23b80
   - enabled: 1
-    path: Assets/Scenes/LVL2.unity
+    path: Assets/Scenes/lvl2.unity
     guid: 5520191c1b17b6c4bbb3f0741c6a8dfd
   - enabled: 1
     path: Assets/Scenes/Win_Scene.unity
