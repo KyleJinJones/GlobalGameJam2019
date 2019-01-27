@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CraftingStation : MonoBehaviour
 {
-    public Transform materialPrefab;
+    public GameObject materialPrefab;
     public Transform[] taskBoardSlots;
     public Image processBar;
     //public Text taskBoard;
