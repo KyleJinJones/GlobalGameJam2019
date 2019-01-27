@@ -20,6 +20,8 @@ public class CraftingStation : MonoBehaviour
     Inventory inventory;
     GameObject carriedObject;
     bool isWorking;
+    //test
+    public float test = 1;
 
     void Start()
     {
@@ -40,9 +42,9 @@ public class CraftingStation : MonoBehaviour
 
     void resetTask()
     {
+        resourceQuantity.RemoveRange(0, resourceQuantity.Count);
         foreach (recipe resource in Recipe)
         {
-            resourceQuantity.RemoveRange(0, resourceQuantity.Count);
             resourceQuantity.Add(resource.quantity);
         }
         for (int i = 0; i < Recipe.Length; i++)
@@ -73,11 +75,11 @@ public class CraftingStation : MonoBehaviour
                 isWorking = true;
                 carriedObject.SetActive(false);
                 inventory.carried = null;
-                StartCoroutine(processMaterial(resourceType));
+                StartCoroutine(processMaterial(resourceType, carriedObject));
             }
         }
     }
-    IEnumerator processMaterial(recipe.resourceNameList resourceType)
+    IEnumerator processMaterial(recipe.resourceNameList resourceType, GameObject carriedObjectPass)
     {
         while (fillAmount < 1f)
         {
@@ -90,13 +92,15 @@ public class CraftingStation : MonoBehaviour
             else
             {
                 resetProcess();
-                Destroy(carriedObject);
+                carriedObjectPass.SetActive(true);
+                carriedObjectPass.transform.position = this.transform.position + 5 * Vector3.left;
                 isWorking = false;
                 yield break;
             } 
         }
         //update task quantity
         int index = ResourceNameList.IndexOf(resourceType);
+        
         resourceQuantity[index]--;
         taskBoardSlots[index].Find("text").GetComponent<Text>().text = resourceQuantity[index].ToString();
         //check if produce new material

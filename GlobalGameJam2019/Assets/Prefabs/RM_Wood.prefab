@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1927759792552268727}
   - component: {fileID: 3625221479299557220}
   - component: {fileID: 8846943920976824293}
+  - component: {fileID: 7224029768754910076}
   m_Layer: 0
   m_Name: RM_Wood
   m_TagString: resource
@@ -91,3 +92,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceType: 0
+--- !u!65 &7224029768754910076
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2155781889263268343}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
