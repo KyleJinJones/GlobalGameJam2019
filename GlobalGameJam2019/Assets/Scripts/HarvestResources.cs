@@ -23,7 +23,9 @@ public class HarvestResources : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        spawnParticles = Instantiate(particles, transform.position, Quaternion.identity);
+        if(other.gameObject.GetComponent<Inventory>()) {
+            spawnParticles = Instantiate(particles, transform.position, Quaternion.identity);
+        }
     }
 
     private void OnTriggerStay(Collider other)
