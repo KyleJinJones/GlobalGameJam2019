@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private float pre_z_dir = 0;
 
     private float angle=0;
+    private float lastangle=0;
 
     void Start()
     {
@@ -25,14 +26,18 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(0, -angle, 0));
+        //transform.Rotate(new Vector3(0, -angle, 0));
         x_dir = Input.GetAxisRaw("Horizontal");
         z_dir = Input.GetAxisRaw("Vertical");
-        angle = Vector3.Angle(Vector3.Normalize(new Vector3(x_dir, 0, z_dir)), Vector3.forward);
-        transform.Rotate(new Vector3(0, angle, 0));
+        if (x_dir != 0 || z_dir != 0)
+        {
+            angle = Vector3.Angle(Vector3.Normalize(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"))), Vector3.forward);
+            if (x_dir < 0) { angle = -angle; }
 
- 
 
+            transform.Rotate(new Vector3(0, angle - lastangle, 0));
+            lastangle = angle;
+        }
     }
 
     private void FixedUpdate()
