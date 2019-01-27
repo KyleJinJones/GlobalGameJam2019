@@ -58,8 +58,13 @@ public class PlacementManager : MonoBehaviour
                 }
                 walls.Remove(closest);
                 closest = null;
+
             }
-            Debug.Log(least);
+            else
+            {
+                closest.Highlight();
+            }
+           
         }
             }
            

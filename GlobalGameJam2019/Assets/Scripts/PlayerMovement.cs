@@ -28,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
         transform.Rotate(new Vector3(0, -angle, 0));
         x_dir = Input.GetAxisRaw("Horizontal");
         z_dir = Input.GetAxisRaw("Vertical");
+        angle = Vector3.Angle(Vector3.Normalize(new Vector3(x_dir, 0, z_dir)), Vector3.forward);
+        transform.Rotate(new Vector3(0, angle, 0));
 
  
 
