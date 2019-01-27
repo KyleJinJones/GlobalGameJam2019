@@ -25,7 +25,7 @@ public class Inventory : MonoBehaviour
             }
             if (nothing)
             {
-                Debug.Log("Tried");
+               
                 a.Play();
                 nothing = false;
             }
