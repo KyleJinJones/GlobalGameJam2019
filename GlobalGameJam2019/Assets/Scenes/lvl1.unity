@@ -1485,6 +1485,36 @@ PrefabInstance:
       propertyPath: Recipe.Array.data[0].quantity
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7545017153061810788, guid: da86b92acf127f74092e97ddd09e91b9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.30070576
+      objectReference: {fileID: 0}
+    - target: {fileID: 7545017153061810788, guid: da86b92acf127f74092e97ddd09e91b9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.953717
+      objectReference: {fileID: 0}
+    - target: {fileID: 7545017153061810788, guid: da86b92acf127f74092e97ddd09e91b9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7545017153061810788, guid: da86b92acf127f74092e97ddd09e91b9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 7545017153061810788, guid: da86b92acf127f74092e97ddd09e91b9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7545017153061810788, guid: da86b92acf127f74092e97ddd09e91b9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.58
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da86b92acf127f74092e97ddd09e91b9, type: 3}
 --- !u!1001 &1296430972

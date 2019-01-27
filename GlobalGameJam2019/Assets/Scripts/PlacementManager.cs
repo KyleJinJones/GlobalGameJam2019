@@ -47,7 +47,7 @@ public class PlacementManager : MonoBehaviour
             closest[p] = walls[0];
             for (int i = 1; i < walls.Count; i++)
             {
-                if (!walls[i].placed&&player[p].GetComponent<Inventory>().carried.GetComponent<BuildType>().building!=walls[i].construct)
+                if (!walls[i].placed&&player[p].GetComponent<Inventory>().carried.GetComponent<BuildType>().building==walls[i].construct)
                 {
                     float temp = walls[i].GetDistance(player[p].transform.position);
                     if (temp < least)
