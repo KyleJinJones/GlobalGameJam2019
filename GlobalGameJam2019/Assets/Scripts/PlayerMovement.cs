@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
 
     private float angle=0;
     private float lastangle=0;
+    public string HorzAxis = "P1_H";
+    public string VerticalAxis = "P1_V";
 
     void Start()
     {
@@ -27,11 +29,11 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //transform.Rotate(new Vector3(0, -angle, 0));
-        x_dir = Input.GetAxisRaw("Horizontal");
-        z_dir = Input.GetAxisRaw("Vertical");
+        x_dir = Input.GetAxisRaw(HorzAxis);
+        z_dir = Input.GetAxisRaw(VerticalAxis);
         if (x_dir != 0 || z_dir != 0)
         {
-            angle = Vector3.Angle(Vector3.Normalize(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"))), Vector3.forward);
+            angle = Vector3.Angle(Vector3.Normalize(new Vector3(Input.GetAxis(HorzAxis), 0, Input.GetAxis(VerticalAxis))), Vector3.forward);
             if (x_dir < 0) { angle = -angle; }
 
 
