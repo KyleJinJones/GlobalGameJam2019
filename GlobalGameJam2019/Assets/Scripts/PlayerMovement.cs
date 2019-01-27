@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     private float lastangle=0;
     public string HorzAxis = "P1_H";
     public string VerticalAxis = "P1_V";
+    public string InteractAxis;
 
     void Start()
     {

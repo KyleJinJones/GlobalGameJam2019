@@ -63,7 +63,7 @@ public class PlacementManager : MonoBehaviour
             if (least <= mindistance)
             {
 
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetAxisRaw(player[p].GetComponent<PlayerMovement>().InteractAxis)==1)
                 {
                     closest[p].Place();
                     if (walls.Count == 1)
@@ -72,7 +72,6 @@ public class PlacementManager : MonoBehaviour
                     }
                     walls.Remove(closest[p]);
                     closest[p] = null;
-
                 }
                 else
                 {
