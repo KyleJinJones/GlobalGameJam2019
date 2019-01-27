@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7861051540585226784}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: material
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   c: {r: 0.4627451, g: 0.3019608, b: 0.09411765, a: 1}
-  hlcol: {r: 0, g: 0.76862746, b: 0.0341959, a: 0.56078434}
+  hlcol: {r: 0.039916348, g: 0.3679245, b: 0.054977976, a: 0.56078434}
   placed: 0
 --- !u!65 &7861051540585226784
 BoxCollider:
@@ -102,8 +102,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1825044035}
   m_Material: {fileID: 13400000, guid: b8739df5a75fcef4e97f8aaf2deb3ee6, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.000001, y: 2, z: 0.20000005}
-  m_Center: {x: -0.00000011920929, y: 0, z: 0.00000024214387}
+  m_Size: {x: 7.639386, y: 3.9742384, z: 0.2}
+  m_Center: {x: 0.052363873, y: -0.06111765, z: 0.00000023841858}

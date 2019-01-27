@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carried: {fileID: 0}
-  scale: 0
+  scale: 1
 --- !u!114 &21724962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,12 +157,12 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 21724957}
-  m_Material: {fileID: 13400000, guid: 5c6d23c87b152f04da2e62169da6e4e3, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2.738474, z: 1}
-  m_Center: {x: 0.00047159195, y: -0.24810082, z: -0.03789702}
+  m_Size: {x: 1.6335025, y: 3.482023, z: 1}
+  m_Center: {x: 0.024455547, y: 1.5367044, z: -0.03789699}
 --- !u!54 &21724964
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -177,7 +177,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1 &170076733
 GameObject:
@@ -369,15 +369,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a6e0616de5241cc43a999a02b4d86f8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.95
+      value: -3.68
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a6e0616de5241cc43a999a02b4d86f8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.05
+      value: 1.36
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a6e0616de5241cc43a999a02b4d86f8c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.59
+      value: -5.76
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a6e0616de5241cc43a999a02b4d86f8c, type: 3}
       propertyPath: m_LocalRotation.x

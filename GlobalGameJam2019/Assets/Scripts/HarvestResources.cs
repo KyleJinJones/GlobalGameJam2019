@@ -10,6 +10,7 @@ public class HarvestResources : MonoBehaviour
     public GameObject rawMaterial; 
     public GameObject particles;
     private GameObject spawnParticles;
+    private int playerCounter;
 
     void Start()
     {
@@ -24,7 +25,9 @@ public class HarvestResources : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.GetComponent<Inventory>()) {
-            spawnParticles = Instantiate(particles, transform.position, Quaternion.identity);
+            playerCounter += 1;
+            if(playerCounter == 1)
+                spawnParticles = Instantiate(particles, transform.position, Quaternion.identity);
         }
     }
 
@@ -40,7 +43,7 @@ public class HarvestResources : MonoBehaviour
                 Debug.Log(timer);
                 if(timer <= 0) {
                     Debug.Log("ITEM HARVESTED");
-                    inventory.carried = rawMaterial;
+                    inventory.carried = Instantiate(rawMaterial, other.transform.position, Quaternion.identity);
                     timer = HARVEST_TIME;
                 }
             }
@@ -48,7 +51,11 @@ public class HarvestResources : MonoBehaviour
     }
 
     private void OnTriggerExit(Collider other) {
-        Destroy(spawnParticles);
+        if(other.gameObject.GetComponent<Inventory>()) {
+            playerCounter -= 1;
+            if(playerCounter == 0)
+                Destroy(spawnParticles);
+        }
     }
 
 }
