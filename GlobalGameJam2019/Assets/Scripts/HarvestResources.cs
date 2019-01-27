@@ -35,7 +35,7 @@ public class HarvestResources : MonoBehaviour
     {
         Inventory inventory = other.GetComponent<Inventory>();
 
-        if(Input.GetKey(KeyCode.E)) {
+        if(Input.GetAxisRaw(other.GetComponent<PlayerMovement>().InteractAxis) == 1) {
             if(inventory.carried != null) {
                 Debug.Log("CANNOT HARVEST ITEM; CURRENTLY CARRYING ITEM");
             } else {
