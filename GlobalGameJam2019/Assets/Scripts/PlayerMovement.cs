@@ -47,11 +47,6 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        
-    }
-
     public float Approach(float a, float b, float c)
     {
         if (a < b)
