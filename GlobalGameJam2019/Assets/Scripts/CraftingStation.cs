@@ -104,7 +104,9 @@ public class CraftingStation : MonoBehaviour
                 resetProcess();
                 carriedObjectPass.SetActive(true);
                 carriedObjectPass.GetComponent<Collider>().enabled = true;
-                carriedObjectPass.transform.position = this.transform.position + 5 * Vector3.left;
+                Vector3 position = this.transform.position + 5 * Vector3.left;
+                position.y = 1;
+                carriedObjectPass.transform.position = position;
                 isWorking = false;
                 yield break;
             } 
@@ -126,7 +128,9 @@ public class CraftingStation : MonoBehaviour
         }
         if (signal == true)
         {
-            Instantiate(materialPrefab, this.transform.position + 7 * Vector3.left, Quaternion.identity);
+            Vector3 position = this.transform.position + 7 * Vector3.left;
+            position.y = 3;
+            Instantiate(materialPrefab, position, Quaternion.identity);
             resetTask();
         }
         resetProcess();
