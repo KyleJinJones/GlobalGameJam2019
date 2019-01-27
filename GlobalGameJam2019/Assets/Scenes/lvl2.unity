@@ -712,8 +712,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  Maxspeed: 10
-  Minspeed: 0
+  Maxspeed: 15
+  Minspeed: 5
   accerleration: 1
   HorzAxis: P4_H
   VerticalAxis: P4_V
@@ -954,8 +954,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  Maxspeed: 10
-  Minspeed: 0
+  Maxspeed: 15
+  Minspeed: 5
   accerleration: 1
   HorzAxis: P2_H
   VerticalAxis: P2_V
@@ -1800,6 +1800,14 @@ PrefabInstance:
     - target: {fileID: 1174516715, guid: 250338ac5b4c3a748927dd6b034fe62e, type: 3}
       propertyPath: carried
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174516716, guid: 250338ac5b4c3a748927dd6b034fe62e, type: 3}
+      propertyPath: Maxspeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174516716, guid: 250338ac5b4c3a748927dd6b034fe62e, type: 3}
+      propertyPath: Minspeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 250338ac5b4c3a748927dd6b034fe62e, type: 3}
@@ -3922,8 +3930,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  Maxspeed: 10
-  Minspeed: 0
+  Maxspeed: 15
+  Minspeed: 5
   accerleration: 1
   HorzAxis: P3_H
   VerticalAxis: P3_V

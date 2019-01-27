@@ -558,8 +558,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  Maxspeed: 10
-  Minspeed: 0
+  Maxspeed: 15
+  Minspeed: 5
   accerleration: 1
   HorzAxis: P4_H
   VerticalAxis: P4_V
@@ -794,8 +794,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  Maxspeed: 10
-  Minspeed: 0
+  Maxspeed: 15
+  Minspeed: 5
   accerleration: 1
   HorzAxis: P2_H
   VerticalAxis: P2_V
@@ -1543,6 +1543,14 @@ PrefabInstance:
     - target: {fileID: 1174516715, guid: 250338ac5b4c3a748927dd6b034fe62e, type: 3}
       propertyPath: carried
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174516716, guid: 250338ac5b4c3a748927dd6b034fe62e, type: 3}
+      propertyPath: Maxspeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174516716, guid: 250338ac5b4c3a748927dd6b034fe62e, type: 3}
+      propertyPath: Minspeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 250338ac5b4c3a748927dd6b034fe62e, type: 3}
@@ -2701,8 +2709,8 @@ Transform:
   m_LocalPosition: {x: -13.110115, y: 3.0227423, z: 1.8589997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 194985805}
   - {fileID: 714836808}
+  - {fileID: 194985805}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3344,8 +3352,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  Maxspeed: 10
-  Minspeed: 0
+  Maxspeed: 15
+  Minspeed: 5
   accerleration: 1
   HorzAxis: P3_H
   VerticalAxis: P3_V
