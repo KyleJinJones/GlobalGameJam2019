@@ -7,23 +7,42 @@ ModelImporter:
     100002: //RootNode
     100004: Player
     100006: Player_Torso
+    100008: Armature
+    100010: Body
+    100012: Head
+    100014: Left_Hand
+    100016: Player__No_Hat_
+    100018: Right_Hand
     400000: Hat
     400002: //RootNode
     400004: Player
     400006: Player_Torso
+    400008: Armature
+    400010: Body
+    400012: Head
+    400014: Left_Hand
+    400016: Player__No_Hat_
+    400018: Right_Hand
     2100000: Hat
     2100002: Material
+    2100004: zHat
+    2100006: zMat
     2300000: Hat
     2300002: Player
     2300004: Player_Torso
+    2300006: Player__No_Hat_
     3300000: Hat
     3300002: Player
     3300004: Player_Torso
+    3300006: Player__No_Hat_
     4300000: Hat
     4300002: Player_Torso
     4300004: Player
+    4300006: Player__No_Hat_
     7400000: Default Take
+    7400002: ArmatureAction
     9500000: //RootNode
+    13700000: Player
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
