@@ -12,13 +12,14 @@ public class CraftingStation : MonoBehaviour
     public enum matetialTypeList {wall};
     public matetialTypeList materialType;
     public recipe[] Recipe;
-    public float processSpeed;
+    public float processingSpeed;
     List<recipe.resourceNameList> ResourceNameList;
     List<int> resourceQuantity;
     //public int wall = 4;
     float fillAmount;
     Inventory inventory;
     GameObject carriedObject;
+    bool isWorking;
 
     void Start()
     {
@@ -31,15 +32,19 @@ public class CraftingStation : MonoBehaviour
         foreach (recipe resource in Recipe)
         {
             ResourceNameList.Add(resource.resourceName);
-            resourceQuantity.Add(resource.quantity);
         }
-        initializeTaskBoard();
-        initializeProcessBar();
+        resetTask();
+        resetProcess();
 
     }
 
-    void initializeTaskBoard()
+    void resetTask()
     {
+        foreach (recipe resource in Recipe)
+        {
+            resourceQuantity.RemoveRange(0, resourceQuantity.Count);
+            resourceQuantity.Add(resource.quantity);
+        }
         for (int i = 0; i < Recipe.Length; i++)
         {
             taskBoardSlots[i].gameObject.SetActive(true);
@@ -48,11 +53,9 @@ public class CraftingStation : MonoBehaviour
         }
     }
 
-    void initializeProcessBar()
+    void resetProcess()
     {
         fillAmount = 0;
-        Debug.Log("name:" + this.name);
-        Debug.Log("process bar:" + processBar);
         processBar.fillAmount = fillAmount;
     }
 
@@ -61,36 +64,39 @@ public class CraftingStation : MonoBehaviour
         
         if (other.CompareTag("Player"))
         {
+            recipe.resourceNameList resourceType;
             carriedObject = other.GetComponent<Inventory>().carried;
             inventory = other.GetComponent<Inventory>();
-            //itemInInventory = other.GetComponent<Inventory>().carried.GetComponent<item>();
-            if (inventory.carried != null && ResourceNameList.Contains(carriedObject.GetComponent<item>().resourceType) && Input.GetKeyDown(KeyCode.E))
+            if (isWorking == false && carriedObject != null && ResourceNameList.Contains(carriedObject.GetComponent<item>().resourceType) && Input.GetKeyDown(KeyCode.E))
             {
+                resourceType = carriedObject.GetComponent<item>().resourceType;
+                isWorking = true;
                 carriedObject.SetActive(false);
-                StartCoroutine(processMaterial());
+                inventory.carried = null;
+                StartCoroutine(processMaterial(resourceType));
             }
         }
     }
-    IEnumerator processMaterial()
+    IEnumerator processMaterial(recipe.resourceNameList resourceType)
     {
         while (fillAmount < 1f)
         {
             if (Input.GetKey(KeyCode.E))
             {
-                fillAmount = Mathf.Min(1f, fillAmount + Time.deltaTime * processSpeed);
+                fillAmount = Mathf.Min(1f, fillAmount + Time.deltaTime * processingSpeed);
                 processBar.fillAmount = fillAmount;
                 yield return new WaitForEndOfFrame();
             }
             else
             {
-                initializeProcessBar();
+                resetProcess();
                 Destroy(carriedObject);
-                inventory.carried = null;
+                isWorking = false;
                 yield break;
             } 
         }
         //update task quantity
-        int index = ResourceNameList.IndexOf(carriedObject.GetComponent<item>().resourceType);
+        int index = ResourceNameList.IndexOf(resourceType);
         resourceQuantity[index]--;
         taskBoardSlots[index].Find("text").GetComponent<Text>().text = resourceQuantity[index].ToString();
         //check if produce new material
@@ -106,13 +112,11 @@ public class CraftingStation : MonoBehaviour
         if (signal == true)
         {
             Instantiate(materialPrefab, this.transform.position + 7 * Vector3.left, Quaternion.identity);
-            initializeTaskBoard();
+            resetTask();
         }
-        
-        initializeProcessBar();
+        resetProcess();
         Destroy(carriedObject);
-        inventory.carried = null;
-        
+        isWorking = false;
     }
 }
 
