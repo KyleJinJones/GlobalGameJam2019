@@ -19,7 +19,7 @@ public class Inventory : MonoBehaviour
             
             Vector3 velocity = this.GetComponent<Rigidbody>().velocity;
             if (velocity.magnitude != 0)
-            {
+            {  
                 Vector3 displacement = Quaternion.AngleAxis(90, new Vector3(0, 1, 0)) * (scale * velocity);
                 carried.transform.position = this.transform.position + displacement / (displacement.magnitude/1.25f) + Vector3.up;
             }
@@ -28,6 +28,7 @@ public class Inventory : MonoBehaviour
                 a.Play();
                 nothing = false;
             }
+            carried.GetComponent<Collider>().enabled = false;
             
         }
         else
