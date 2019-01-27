@@ -60,7 +60,7 @@ public class PlacementManager : MonoBehaviour
 
                 //Once the closest wall has been found, check player distance from it
                 //If it is close enough, highlight it, or if they press e, place the wall
-                if (least <= mindistance)
+                if (least <= mindistance&&player[p].GetComponent<Inventory>().carried.GetComponent<BuildType>().building==closest[p].construct)
                 {
 
                     if (Input.GetAxisRaw(player[p].GetComponent<PlayerMovement>().InteractAxis) == 1)
