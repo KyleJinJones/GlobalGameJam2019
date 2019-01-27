@@ -15,6 +15,8 @@ ModelImporter:
     100018: Left Hand_end
     100020: Right Hand
     100022: Right Hand_end
+    100024: Player (No Hat)
+    100026: Sun
     400000: //RootNode
     400002: Hat
     400004: Player
@@ -27,6 +29,8 @@ ModelImporter:
     400018: Left Hand_end
     400020: Right Hand
     400022: Right Hand_end
+    400024: Player (No Hat)
+    400026: Sun
     2100000: Material
     2100002: Hat
     2100004: zHat
@@ -35,16 +39,20 @@ ModelImporter:
     2300002: Hat
     2300004: Player
     2300006: Player Torso
+    2300008: Player (No Hat)
     3300000: //RootNode
     3300002: Hat
     3300004: Player
     3300006: Player Torso
+    3300008: Player (No Hat)
     4300000: Player
     4300002: Hat
     4300004: Player Torso
+    4300006: Player (No Hat)
     7400000: Player Pick up
     7400002: Player Put Down
     9500000: //RootNode
+    10800000: Sun
     13700000: Player
   externalObjects: {}
   materials:
