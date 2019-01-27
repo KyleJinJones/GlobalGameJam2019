@@ -50,7 +50,7 @@ public class CraftingStation : MonoBehaviour
         for (int i = 0; i < Recipe.Length; i++)
         {
             taskBoardSlots[i].gameObject.SetActive(true);
-            taskBoardSlots[i].Find("image").GetComponent<Image>().sprite = Recipe[i].sprite;
+            taskBoardSlots[i].Find("image").GetComponent<RawImage>().texture = Recipe[i].RT;
             taskBoardSlots[i].Find("text").GetComponent<Text>().text = Recipe[i].quantity.ToString();
         }
     }
@@ -130,6 +130,6 @@ public class recipe
 {
     public enum resourceNameList { wood, stone, metal};
     public resourceNameList resourceName;
-    public Sprite sprite;
+    public RenderTexture RT;
     public int quantity;
 }
