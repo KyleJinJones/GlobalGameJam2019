@@ -25,6 +25,7 @@ public class DisposeInventory : MonoBehaviour
             if(inventory.carried == null) {
                 Debug.Log("CANNOT THROW ITEM; NO ITEM IN INVENTORY");
             } else {
+                Destroy(inventory.carried);
                 inventory.carried = null;
             }
         }
