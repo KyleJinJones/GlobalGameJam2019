@@ -7,14 +7,27 @@ public class Placement : MonoBehaviour
 {
     private Renderer r;
     public Color c;
+    public Color hlcol;
+    private Color def;
     public bool placed = false;
     private Collider cl;
+    
 
     private void Start()
     {
+        
         r = this.GetComponent<Renderer>();
         cl = GetComponent<Collider>();
         cl.enabled=false;
+        def = r.material.color;
+    }
+    public void DefaultColor()
+    {
+        r.material.color = def;
+    }
+    public void Highlight()
+    {
+        r.material.color = hlcol;
     }
 
     public void Place()
