@@ -1418,7 +1418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c0aaacd39ef49d409568b20cdede297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carried: {fileID: 0}
+  carried: {fileID: 8926105476013361434, guid: 4341fd78720188b44b45f4664d7332b2, type: 3}
   scale: 1
 --- !u!114 &1174516716
 MonoBehaviour:
@@ -1639,6 +1639,11 @@ PrefabInstance:
       propertyPath: taskBoardSlots.Array.data[2]
       value: 
       objectReference: {fileID: 2129605862}
+    - target: {fileID: 7545017154511907222, guid: da86b92acf127f74092e97ddd09e91b9,
+        type: 3}
+      propertyPath: processingSpeed
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da86b92acf127f74092e97ddd09e91b9, type: 3}
 --- !u!1001 &1296430972

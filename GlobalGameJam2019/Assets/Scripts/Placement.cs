@@ -11,6 +11,7 @@ public class Placement : MonoBehaviour
     private Color def;
     public bool placed = false;
     private Collider cl;
+    public string construct = "Wall";
     
 
     private void Start()
