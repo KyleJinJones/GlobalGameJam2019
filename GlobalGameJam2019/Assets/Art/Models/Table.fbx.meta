@@ -1,42 +1,17 @@
 fileFormatVersion: 2
-guid: 233f91931e2b1f9459301b47cb8bb8d5
+guid: 2b81481da937daa4ea40c80badd55ee0
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Bathtub
-    100002: Chair
-    100004: //RootNode
-    100006: Table
-    100008: Fridge
-    100010: Bed
-    400000: Bathtub
-    400002: Chair
-    400004: //RootNode
-    400006: Table
-    400008: Fridge
-    400010: Bed
+    100000: //RootNode
+    400000: //RootNode
     2100000: zMat
-    2100002: zMat2
-    2300000: Bathtub
-    2300002: Chair
-    2300004: Table
-    2300006: Fridge
-    2300008: Bed
-    3300000: Bathtub
-    3300002: Chair
-    3300004: Table
-    3300006: Fridge
-    3300008: Bed
-    4300000: Chair
-    4300002: Bathtub
-    4300004: Table
-    4300006: Fridge
-    4300008: Bed
-    7400000: Default Take
-    9500000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Table
   externalObjects: {}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -85,9 +60,9 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -114,7 +89,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
