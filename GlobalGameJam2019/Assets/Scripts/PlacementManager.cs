@@ -39,7 +39,7 @@ public class PlacementManager : MonoBehaviour
             {
                 closest.Place();
             }
-            Debug.Log(least);
+            //Debug.Log(least);
         }
 
     }

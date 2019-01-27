@@ -45,12 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
         speed = Minspeed;
         rb.velocity = Vector3.Normalize(new Vector3(x_dir, 0, z_dir)) * speed;
-        Debug.Log(speed);
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        
+        //Debug.Log(speed);
     }
 
     public float Approach(float a, float b, float c)
