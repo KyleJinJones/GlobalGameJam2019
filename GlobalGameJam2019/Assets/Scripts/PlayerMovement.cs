@@ -8,13 +8,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 5.0f;
     [SerializeField] private float Maxspeed = 10.0f;
     [SerializeField] private float Minspeed = 0f;
-    [SerializeField] private float accerleration = 1f;
+    [SerializeField] private float accerleration = 1.5f;
  
     private float x_dir = 0;
     private float z_dir = 0;
     private float pre_x_dir = 0;
     private float pre_z_dir = 0;
 
+  
     void Start()
     {
         rb=GetComponent<Rigidbody>();
@@ -26,10 +27,8 @@ public class PlayerMovement : MonoBehaviour
         x_dir = Input.GetAxisRaw("Horizontal");
         z_dir = Input.GetAxisRaw("Vertical");
 
-        if (x_dir != 0) pre_x_dir = x_dir;
-        
-        if (z_dir != 0) pre_z_dir = z_dir;
-        
+ 
+
     }
 
     private void FixedUpdate()
@@ -45,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
         speed = Minspeed;
         rb.velocity = Vector3.Normalize(new Vector3(x_dir, 0, z_dir)) * speed;
-        Debug.Log(speed);
+        
     }
 
     private void OnTriggerStay(Collider other)
