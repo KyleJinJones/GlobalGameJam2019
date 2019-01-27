@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8926105476013361434
+--- !u!1 &615025101
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8926105476013361438}
-  - component: {fileID: 8926105476013361437}
-  - component: {fileID: 8926105476013361436}
-  - component: {fileID: 8926105476013361435}
-  - component: {fileID: 5596163145780373894}
+  - component: {fileID: 615025102}
+  - component: {fileID: 615025105}
+  - component: {fileID: 615025106}
+  - component: {fileID: 615025104}
+  - component: {fileID: 615025103}
   m_Layer: 0
-  m_Name: wall_craftingTable
-  m_TagString: material
+  m_Name: Bathtub
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8926105476013361438
+--- !u!4 &615025102
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8926105476013361434}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.7059503, y: 2, z: 8.3451805}
-  m_LocalScale: {x: 0.36648652, y: 0.40445, z: 1}
+  m_GameObject: {fileID: 615025101}
+  m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.4508368, y: -1.5038214, z: 2.1741238}
+  m_LocalScale: {x: 0.25, y: 0.5, z: 0.25}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8926105476013361437
+--- !u!33 &615025105
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8926105476013361434}
-  m_Mesh: {fileID: 4300000, guid: 217c1183125d9a7478944122c991c72d, type: 3}
---- !u!23 &8926105476013361436
+  m_GameObject: {fileID: 615025101}
+  m_Mesh: {fileID: 4300000, guid: 3f4414f4949918640a92288aaf40a1c0, type: 3}
+--- !u!23 &615025106
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8926105476013361434}
+  m_GameObject: {fileID: 615025101}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 91d36562cc677be4cab0527c56a2dda5, type: 2}
+  - {fileID: 2100000, guid: 0f28d90a65910d446a07103069921288, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,29 +79,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &8926105476013361435
+--- !u!65 &615025104
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8926105476013361434}
+  m_GameObject: {fileID: 615025101}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.556273, y: 2.3100443, z: 2.4963477}
-  m_Center: {x: -0.19985092, y: 0.6550225, z: 0.049206853}
---- !u!114 &5596163145780373894
+  m_Size: {x: 2.4, y: 1.8107995, z: 4.8000007}
+  m_Center: {x: 0, y: -0.32695764, z: 0}
+--- !u!114 &615025103
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8926105476013361434}
+  m_GameObject: {fileID: 615025101}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30062b9d31ee15441bda6b4ec3f69d3e, type: 3}
+  m_Script: {fileID: 11500000, guid: cae768f77ce8b0d4a8683c45583199a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  building: Wall
+  c: {r: 1, g: 1, b: 1, a: 1}
+  hlcol: {r: 0.039215688, g: 0.36862746, b: 0.05490196, a: 0.35686275}
+  placed: 0
+  construct: Bath
