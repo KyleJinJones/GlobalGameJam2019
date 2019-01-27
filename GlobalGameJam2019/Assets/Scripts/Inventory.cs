@@ -6,8 +6,8 @@ public class Inventory : MonoBehaviour
 {
     public GameObject carried;
     public float scale;
-    AudioSource a;
-    private bool nothing = true;
+    public AudioSource a;
+    public bool nothing = true;
     private void Start()
     {
         a = GetComponent<AudioSource>();
@@ -25,6 +25,7 @@ public class Inventory : MonoBehaviour
             }
             if (nothing)
             {
+                Debug.Log("Tried");
                 a.Play();
                 nothing = false;
             }
