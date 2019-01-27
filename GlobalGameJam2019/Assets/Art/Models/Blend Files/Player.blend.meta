@@ -27,6 +27,7 @@ ModelImporter:
     2100002: Material
     2100004: zHat
     2100006: zMat
+    2100008: zPlayer_uv__Player_Texture_png
     2300000: Hat
     2300002: Player
     2300004: Player_Torso
