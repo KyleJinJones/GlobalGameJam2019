@@ -15,10 +15,21 @@ public class Inventory : MonoBehaviour
             if (velocity.magnitude != 0)
             {
                 Vector3 displacement = Quaternion.AngleAxis(90, new Vector3(0, 1, 0)) * (scale * velocity);
-                carried.transform.position = this.transform.position + displacement / (displacement.magnitude/1.25f);
+                carried.transform.position = this.transform.position + displacement / (displacement.magnitude/1.25f) + Vector3.up;
             }
             
         }
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("test:" + other.tag);
+        if ((other.tag == "material" || other.tag == "resource" )&& carried == null)
+        {
+            
+            carried = other.gameObject;
+
+        }
     }
 }

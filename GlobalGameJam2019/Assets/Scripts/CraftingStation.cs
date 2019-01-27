@@ -17,7 +17,8 @@ public class CraftingStation : MonoBehaviour
     List<int> resourceQuantity;
     //public int wall = 4;
     float fillAmount;
-    item itemInInventory;
+    Inventory inventory;
+    GameObject carriedObject;
 
     void Start()
     {
@@ -60,10 +61,12 @@ public class CraftingStation : MonoBehaviour
         
         if (other.CompareTag("Player"))
         {
-            itemInInventory = other.GetComponent<Inventory>().carried.GetComponent<item>();
-            if (itemInInventory!= null && ResourceNameList.Contains(itemInInventory.resourceType) && Input.GetKeyDown(KeyCode.E))
+            carriedObject = other.GetComponent<Inventory>().carried;
+            inventory = other.GetComponent<Inventory>();
+            //itemInInventory = other.GetComponent<Inventory>().carried.GetComponent<item>();
+            if (inventory.carried != null && ResourceNameList.Contains(carriedObject.GetComponent<item>().resourceType) && Input.GetKeyDown(KeyCode.E))
             {
-                other.GetComponent<Inventory>().carried.gameObject.SetActive(false);
+                carriedObject.SetActive(false);
                 StartCoroutine(processMaterial());
             }
         }
@@ -81,18 +84,15 @@ public class CraftingStation : MonoBehaviour
             else
             {
                 initializeProcessBar();
-                Destroy(itemInInventory);
-                itemInInventory = null;
+                Destroy(carriedObject);
+                inventory.carried = null;
                 yield break;
             } 
         }
         //update task quantity
-        int index = ResourceNameList.IndexOf(itemInInventory.resourceType);
+        int index = ResourceNameList.IndexOf(carriedObject.GetComponent<item>().resourceType);
         resourceQuantity[index]--;
-        Debug.Log("index:" + index);
-        Debug.Log("quantity" + resourceQuantity[index]);
         taskBoardSlots[index].Find("text").GetComponent<Text>().text = resourceQuantity[index].ToString();
-        Debug.Log("text:" + taskBoardSlots[index].Find("text").GetComponent<Text>().text);
         //check if produce new material
         bool signal = true;
         foreach (int quantity in resourceQuantity)
@@ -105,13 +105,13 @@ public class CraftingStation : MonoBehaviour
         }
         if (signal == true)
         {
-            Instantiate(materialPrefab, this.transform.position, Quaternion.identity);
+            Instantiate(materialPrefab, this.transform.position + 7 * Vector3.left, Quaternion.identity);
             initializeTaskBoard();
         }
         
         initializeProcessBar();
-        Destroy(itemInInventory);
-        itemInInventory = null;
+        Destroy(carriedObject);
+        inventory.carried = null;
         
     }
 }
