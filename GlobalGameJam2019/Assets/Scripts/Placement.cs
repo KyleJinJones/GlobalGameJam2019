@@ -21,6 +21,15 @@ public class Placement : MonoBehaviour
         cl.enabled=false;
         def = r.material.color;
     }
+    private void Update()
+    {
+        if (placed)
+        {
+            cl.enabled = true;
+            r.material.color = c;
+        }    
+    }
+
     public void DefaultColor()
     {
         r.material.color = def;
@@ -36,6 +45,7 @@ public class Placement : MonoBehaviour
         r.material.color = c;
         placed = true;
         cl.enabled = true;
+        cl.isTrigger = false;
         
     }
 
