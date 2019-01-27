@@ -1,46 +1,14 @@
 fileFormatVersion: 2
-guid: f21bf05962f7e6b459d35ae2e89e12f2
+guid: 0639060dad7e3884081d62e1d50ca85c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Trash_Can
-    100004: Tree
-    100006: Trash
-    100008: Ore
-    100010: Rock
     400000: //RootNode
-    400002: Trash_Can
-    400004: Tree
-    400006: Trash
-    400008: Ore
-    400010: Rock
-    2100000: Bark
-    2100002: Leaf
-    2100004: unnamed
-    2100006: TrashMat
-    2100008: Rock
-    2100010: Metal
+    2100000: Rock
     2300000: //RootNode
-    2300002: Trash_Can
-    2300004: Tree
-    2300006: Trash
-    2300008: Ore
-    2300010: Rock
     3300000: //RootNode
-    3300002: Trash_Can
-    3300004: Tree
-    3300006: Trash
-    3300008: Ore
-    3300010: Rock
-    4300000: Tree
-    4300002: Trash_Can
-    4300004: Trash
-    4300006: Ore
-    4300008: Rock
-    7400000: Default Take
-    9500000: //RootNode
-    2186277476908879412: ImportLogs
+    4300000: Rock
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -94,7 +62,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -121,7 +89,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
