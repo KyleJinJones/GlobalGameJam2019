@@ -93,6 +93,7 @@ public class CraftingStation : MonoBehaviour
             {
                 resetProcess();
                 carriedObjectPass.SetActive(true);
+                carriedObjectPass.GetComponent<Collider>().enabled = true;
                 carriedObjectPass.transform.position = this.transform.position + 5 * Vector3.left;
                 isWorking = false;
                 yield break;
