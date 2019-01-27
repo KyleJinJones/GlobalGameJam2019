@@ -69,13 +69,23 @@ public class CraftingStation : MonoBehaviour
             recipe.resourceNameList resourceType;
             carriedObject = other.GetComponent<Inventory>().carried;
             inventory = other.GetComponent<Inventory>();
-            if (isWorking == false && carriedObject != null && carriedObject.CompareTag("resource") &&ResourceNameList.Contains(carriedObject.GetComponent<item>().resourceType) && Input.GetAxisRaw(other.GetComponent<PlayerMovement>().InteractAxis) == 1)
+            int index;
+            
+            if ( Input.GetAxisRaw(other.GetComponent<PlayerMovement>().InteractAxis) == 1 && isWorking == false && carriedObject != null && carriedObject.CompareTag("resource") )
             {
                 resourceType = carriedObject.GetComponent<item>().resourceType;
-                isWorking = true;
-                carriedObject.SetActive(false);
-                inventory.carried = null;
-                StartCoroutine(processMaterial(resourceType, carriedObject, other));
+                if (ResourceNameList.Contains(resourceType)){
+                    index = ResourceNameList.IndexOf(resourceType);
+                    if (resourceQuantity[index] > 0)
+                    {
+                        isWorking = true;
+                        carriedObject.SetActive(false);
+                        inventory.carried = null;
+                        StartCoroutine(processMaterial(resourceType, carriedObject, other));
+                    }
+                }
+                
+                
             }
         }
     }
