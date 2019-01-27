@@ -75,15 +75,15 @@ public class CraftingStation : MonoBehaviour
                 isWorking = true;
                 carriedObject.SetActive(false);
                 inventory.carried = null;
-                StartCoroutine(processMaterial(resourceType, carriedObject));
+                StartCoroutine(processMaterial(resourceType, carriedObject, other));
             }
         }
     }
-    IEnumerator processMaterial(recipe.resourceNameList resourceType, GameObject carriedObjectPass)
+    IEnumerator processMaterial(recipe.resourceNameList resourceType, GameObject carriedObjectPass, Collider other)
     {
         while (fillAmount < 1f)
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetAxisRaw(other.GetComponent<PlayerMovement>().InteractAxis) == 1)
             {
                 fillAmount = Mathf.Min(1f, fillAmount + Time.deltaTime * processingSpeed);
                 processBar.fillAmount = fillAmount;
