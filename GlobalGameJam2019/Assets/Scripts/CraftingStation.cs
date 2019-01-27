@@ -67,7 +67,7 @@ public class CraftingStation : MonoBehaviour
             recipe.resourceNameList resourceType;
             carriedObject = other.GetComponent<Inventory>().carried;
             inventory = other.GetComponent<Inventory>();
-            if (isWorking == false && carriedObject != null && ResourceNameList.Contains(carriedObject.GetComponent<item>().resourceType) && Input.GetKeyDown(KeyCode.E))
+            if (isWorking == false && carriedObject != null && carriedObject.CompareTag("resource") &&ResourceNameList.Contains(carriedObject.GetComponent<item>().resourceType) && Input.GetKeyDown(KeyCode.E))
             {
                 resourceType = carriedObject.GetComponent<item>().resourceType;
                 isWorking = true;

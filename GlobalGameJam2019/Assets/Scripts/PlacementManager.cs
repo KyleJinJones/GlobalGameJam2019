@@ -40,14 +40,14 @@ public class PlacementManager : MonoBehaviour
         {
 
             //Temporarily set the last highlighted wall off
-            
 
+            if(player[p].GetComponent<Inventory>().carried != null&& player[p].GetComponent<Inventory>().carried.name.Contains("RM")==false) { 
             //Loop through walls to find which one the player is closest to
             least = walls[0].GetDistance(player[p].transform.position);
             closest[p] = walls[0];
             for (int i = 1; i < walls.Count; i++)
             {
-                if (!walls[i].placed)
+                if (!walls[i].placed&&player[p].GetComponent<Inventory>().carried.GetComponent<BuildType>().building!=walls[i].construct)
                 {
                     float temp = walls[i].GetDistance(player[p].transform.position);
                     if (temp < least)
@@ -58,24 +58,28 @@ public class PlacementManager : MonoBehaviour
                 }
             }
 
-            //Once the closest wall has been found, check player distance from it
-            //If it is close enough, highlight it, or if they press e, place the wall
-            if (least <= mindistance)
-            {
+                //Once the closest wall has been found, check player distance from it
+                //If it is close enough, highlight it, or if they press e, place the wall
+                if (least <= mindistance)
+                {
 
-                if (Input.GetAxisRaw(player[p].GetComponent<PlayerMovement>().InteractAxis)==1)
-                {
-                    closest[p].Place();
-                    if (walls.Count == 1)
+                    if (Input.GetAxisRaw(player[p].GetComponent<PlayerMovement>().InteractAxis) == 1)
                     {
-                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                        closest[p].Place();
+                        if (walls.Count == 1)
+                        {
+                            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                        }
+                        walls.Remove(closest[p]);
+                        GameObject temp = player[p].GetComponent<Inventory>().carried;
+                        player[p].GetComponent<Inventory>().carried = null;
+                        Destroy(temp);
+                        closest[p] = null;
                     }
-                    walls.Remove(closest[p]);
-                    closest[p] = null;
-                }
-                else
-                {
-                    closest[p].Highlight();
+                    else
+                    {
+                        closest[p].Highlight();
+                    }
                 }
 
             }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8926105476013361437}
   - component: {fileID: 8926105476013361436}
   - component: {fileID: 8926105476013361435}
+  - component: {fileID: 5596163145780373894}
   m_Layer: 0
   m_Name: wall_craftingTable
   m_TagString: material
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8926105476013361434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.97, y: 2.34, z: 3.583}
+  m_LocalPosition: {x: -0.1105196, y: 2, z: -1.8170478}
   m_LocalScale: {x: 0.36648652, y: 0.40445, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -91,3 +92,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.556273, y: 2.3100443, z: 2.4963477}
   m_Center: {x: -0.19985092, y: 0.6550225, z: 0.049206853}
+--- !u!114 &5596163145780373894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8926105476013361434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30062b9d31ee15441bda6b4ec3f69d3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  building: wall
