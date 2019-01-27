@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/lvl2.unity
     guid: 5520191c1b17b6c4bbb3f0741c6a8dfd
   - enabled: 1
+    path: Assets/Scenes/lvl3.unity
+    guid: 76b988070b7cc2c429e8cb266d8162c0
+  - enabled: 1
     path: Assets/Scenes/Win_Scene.unity
     guid: 9ce00e283f217ce4598ad7556bc15d2a
   - enabled: 1
