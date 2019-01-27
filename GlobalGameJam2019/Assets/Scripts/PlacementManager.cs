@@ -7,66 +7,81 @@ public class PlacementManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public List<Placement> walls;
-    public GameObject player;
+    public List<GameObject> player;
     private float least=0;
-    private Placement closest=null;
+    private Placement[] closest = null;
     [SerializeField] private float mindistance=2;
     void Start()
     {
-        
+        closest = new Placement[4];
+        closest[0] = walls[0];
+        closest[1] = walls[0];
+        closest[2] = walls[0];
+        closest[3] = walls[0];
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Check if there's no more walls to be placed
-        
-        
-        //Temporarily set the last highlighted wall off
         if (closest != null)
         {
-            closest.DefaultColor();
+            for (int i = 0; i < closest.Length; i++)
+            {
+                if (closest[i] != null)
+                {
+                    closest[i].DefaultColor();
+                }
+            }
         }
+   
+        
+        //Check if there's no more walls to be placed
+        for (int p = 0; p < player.Count; p++)
+        {
+
+            //Temporarily set the last highlighted wall off
             
-        //Loop through walls to find which one the player is closest to
-            least = walls[0].GetDistance(player.transform.position);
-            closest = walls[0];
+
+            //Loop through walls to find which one the player is closest to
+            least = walls[0].GetDistance(player[p].transform.position);
+            closest[p] = walls[0];
             for (int i = 1; i < walls.Count; i++)
             {
                 if (!walls[i].placed)
                 {
-                    float temp = walls[i].GetDistance(player.transform.position);
+                    float temp = walls[i].GetDistance(player[p].transform.position);
                     if (temp < least)
                     {
                         least = temp;
-                        closest = walls[i];
+                        closest[p] = walls[i];
                     }
                 }
             }
 
-        //Once the closest wall has been found, check player distance from it
-        //If it is close enough, highlight it, or if they press e, place the wall
-        if (least <= mindistance)
-        {
-
-            if (Input.GetKeyDown(KeyCode.E))
+            //Once the closest wall has been found, check player distance from it
+            //If it is close enough, highlight it, or if they press e, place the wall
+            if (least <= mindistance)
             {
-                closest.Place();
-                if (walls.Count == 1)
+
+                if (Input.GetKeyDown(KeyCode.E))
                 {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                    closest[p].Place();
+                    if (walls.Count == 1)
+                    {
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                    }
+                    walls.Remove(closest[p]);
+                    closest[p] = null;
+
                 }
-                walls.Remove(closest);
-                closest = null;
+                else
+                {
+                    closest[p].Highlight();
+                }
 
             }
-            else
-            {
-                closest.Highlight();
-            }
-           
         }
-            }
+    }
            
         
 

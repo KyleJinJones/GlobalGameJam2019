@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   c: {r: 0.4627451, g: 0.3019608, b: 0.09411765, a: 1}
-  hlcol: {r: 0, g: 0.76862746, b: 0.0341959, a: 0.56078434}
+  hlcol: {r: 0.039916348, g: 0.3679245, b: 0.054977976, a: 0.56078434}
   placed: 0
 --- !u!65 &7861051540585226784
 BoxCollider:
