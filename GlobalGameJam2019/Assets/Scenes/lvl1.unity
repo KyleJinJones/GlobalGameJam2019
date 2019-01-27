@@ -543,6 +543,7 @@ MonoBehaviour:
   accerleration: 1
   HorzAxis: P4_H
   VerticalAxis: P4_V
+  InteractAxis: 
 --- !u!136 &421466241
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -694,6 +695,7 @@ MonoBehaviour:
   accerleration: 1
   HorzAxis: P2_H
   VerticalAxis: P2_V
+  InteractAxis: 
 --- !u!114 &511714507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1243,8 +1245,9 @@ MonoBehaviour:
   Maxspeed: 10
   Minspeed: 0
   accerleration: 1
-  HorzAxis: Horizontal
-  VerticalAxis: Vertical
+  HorzAxis: P1_H
+  VerticalAxis: P1_V
+  InteractAxis: 
 --- !u!4 &1174516719 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: a6e0616de5241cc43a999a02b4d86f8c,
@@ -2150,7 +2153,7 @@ Transform:
   - {fileID: 302266797}
   - {fileID: 1633454822}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1633454821
 GameObject:
@@ -2558,6 +2561,7 @@ MonoBehaviour:
   accerleration: 1
   HorzAxis: P3_H
   VerticalAxis: P3_V
+  InteractAxis: 
 --- !u!136 &1993942158
 CapsuleCollider:
   m_ObjectHideFlags: 0
