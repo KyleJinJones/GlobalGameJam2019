@@ -91,7 +91,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7129044594302244922}
   - component: {fileID: 1282382529160168611}
-  - component: {fileID: 3825280456575918814}
   m_Layer: 0
   m_Name: door
   m_TagString: Untagged
@@ -156,14 +155,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &3825280456575918814
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 744105927785069077}
-  m_Enabled: 1
 --- !u!1 &957871581564974677
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,7 +704,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4958153256118582117}
   - component: {fileID: 8083223914791466503}
-  - component: {fileID: 5970535287749045467}
   m_Layer: 0
   m_Name: table
   m_TagString: Untagged
@@ -778,14 +768,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &5970535287749045467
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3640836364728380387}
-  m_Enabled: 1
 --- !u!1 &4179175368446891300
 GameObject:
   m_ObjectHideFlags: 0
@@ -1358,7 +1340,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2871555995184845332}
   - component: {fileID: 6939349025265153981}
-  - component: {fileID: 9103687755788420203}
   m_Layer: 0
   m_Name: treeCamera
   m_TagString: Untagged
@@ -1423,14 +1404,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &9103687755788420203
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5449849665261591853}
-  m_Enabled: 1
 --- !u!1 &5467560624474106954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1594,7 +1567,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2330779247857931830}
   - component: {fileID: 4898670701847168609}
-  - component: {fileID: 7724134539260744966}
   m_Layer: 0
   m_Name: wall
   m_TagString: Untagged
@@ -1659,14 +1631,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7724134539260744966
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6479722015034391774}
-  m_Enabled: 1
 --- !u!1 &6668762889394814140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,7 +1718,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7999162611271056436}
   - component: {fileID: 3061995758202039848}
-  - component: {fileID: 5042605941563490292}
   m_Layer: 0
   m_Name: fridge
   m_TagString: Untagged
@@ -1819,14 +1782,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &5042605941563490292
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7509611557026760410}
-  m_Enabled: 1
 --- !u!1 &7525194884739996257
 GameObject:
   m_ObjectHideFlags: 0
@@ -1837,7 +1792,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3643572153277601784}
   - component: {fileID: 4290407035107038197}
-  - component: {fileID: 3732999006623069511}
   m_Layer: 0
   m_Name: metalCamera
   m_TagString: Untagged
@@ -1902,14 +1856,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &3732999006623069511
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7525194884739996257}
-  m_Enabled: 1
 --- !u!1 &7545017153061810795
 GameObject:
   m_ObjectHideFlags: 0
@@ -1947,7 +1893,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.06699371, y: 0}
+  m_AnchoredPosition: {x: 0.06699371, y: -2}
   m_SizeDelta: {x: 2.912, y: 1.205}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7545017153061810791
@@ -2420,7 +2366,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9093406718939280349}
   - component: {fileID: 217053591501970562}
-  - component: {fileID: 487821914434720812}
   m_Layer: 0
   m_Name: chair
   m_TagString: Untagged
@@ -2485,14 +2430,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &487821914434720812
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8692906754221335952}
-  m_Enabled: 1
 --- !u!1 &9111613770935539240
 GameObject:
   m_ObjectHideFlags: 0
@@ -2565,7 +2502,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.96, y: 7.19}
+  m_AnchoredPosition: {x: -0.96, y: 3.2}
   m_SizeDelta: {x: 8.4, y: 1.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1193879098751246891
