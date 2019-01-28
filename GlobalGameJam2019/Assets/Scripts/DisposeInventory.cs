@@ -21,9 +21,9 @@ public class DisposeInventory : MonoBehaviour
     {
         Inventory inventory = other.GetComponent<Inventory>();
 
-        if(Input.GetAxisRaw(other.GetComponent<PlayerMovement>().InteractAxis) == 1) {
+        if(other.CompareTag("Player") && Input.GetAxisRaw(other.GetComponent<PlayerMovement>().InteractAxis) == 1) {
             if(inventory.carried == null) {
-                Debug.Log("CANNOT THROW ITEM; NO ITEM IN INVENTORY");
+               
             } else {
                 Destroy(inventory.carried);
                 inventory.carried = null;
