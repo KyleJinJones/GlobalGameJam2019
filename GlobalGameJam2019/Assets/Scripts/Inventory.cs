@@ -6,17 +6,22 @@ public class Inventory : MonoBehaviour
 {
     public GameObject carried;
     public float scale;
-    public AudioSource a;
     public bool nothing = true;
+
+    private AudioSource a;
+    private Animator anim;
+
     private void Start()
     {
         a = GetComponent<AudioSource>();
+        anim = GetComponent<Animator>();
     }
     void Update()
     {
         if (carried != null)
         {
-            
+            anim.SetBool("Hold", true);
+
             Vector3 velocity = this.GetComponent<Rigidbody>().velocity;
             if (velocity.magnitude != 0)
             {  
@@ -34,6 +39,8 @@ public class Inventory : MonoBehaviour
         }
         else
         {
+            anim.SetBool("Hold", false);
+
             nothing = true;
         }
 
@@ -44,10 +51,8 @@ public class Inventory : MonoBehaviour
         //Debug.Log("test:" + other.tag);
         if ((other.tag == "material" || other.tag == "resource" )&& carried == null)
         {
-            
             carried = other.gameObject;
             a.Play();
-
         }
     }
 }
