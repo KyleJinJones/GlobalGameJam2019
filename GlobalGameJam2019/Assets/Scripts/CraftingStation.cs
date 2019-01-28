@@ -6,13 +6,18 @@ using UnityEngine.UI;
 public class CraftingStation : MonoBehaviour
 {
     public GameObject materialPrefab;
+    public RenderTexture materialTexture;
+    public recipe[] Recipe;
+    public enum matetialTypeList { wall };
+    public matetialTypeList materialType;
+    public RawImage materialSlot;
     public Transform[] taskBoardSlots;
     public Image processBar;
+    
     //public Text taskBoard;
-    public enum matetialTypeList {wall};
-    public matetialTypeList materialType;
-    public recipe[] Recipe;
-    public float processingSpeed;
+
+
+    public float processingSpeed = 1;
     List<recipe.resourceNameList> ResourceNameList;
     List<int> resourceQuantity;
     //public int wall = 4;
@@ -37,7 +42,7 @@ public class CraftingStation : MonoBehaviour
         }
         resetTask();
         resetProcess();
-
+        materialSlot.texture = materialTexture;
     }
 
     void resetTask()
@@ -53,6 +58,7 @@ public class CraftingStation : MonoBehaviour
             taskBoardSlots[i].Find("image").GetComponent<RawImage>().texture = Recipe[i].RT;
             taskBoardSlots[i].Find("text").GetComponent<Text>().text = Recipe[i].quantity.ToString();
         }
+
     }
 
     void resetProcess()
