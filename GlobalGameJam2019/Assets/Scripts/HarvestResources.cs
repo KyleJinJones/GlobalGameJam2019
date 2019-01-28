@@ -35,7 +35,7 @@ public class HarvestResources : MonoBehaviour
     {
         Inventory inventory = other.GetComponent<Inventory>();
 
-        if(Input.GetAxisRaw(other.GetComponent<PlayerMovement>().InteractAxis) == 1) {
+        if(other.CompareTag("Player")&&Input.GetAxisRaw(other.GetComponent<PlayerMovement>().InteractAxis) == 1) {
             if(inventory.carried == null)  {
                 timer = timer - Time.deltaTime;
                 if(timer <= 0) {

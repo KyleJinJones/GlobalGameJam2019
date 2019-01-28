@@ -82,7 +82,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5261535337262460211}
   - component: {fileID: 8932522410834201979}
-  - component: {fileID: 3549246510694309835}
   m_Layer: 0
   m_Name: stoneCamera
   m_TagString: Untagged
@@ -147,14 +146,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &3549246510694309835
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 957871581564974677}
-  m_Enabled: 1
 --- !u!1 &1099424888169070738
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,7 +694,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2871555995184845332}
   - component: {fileID: 6939349025265153981}
-  - component: {fileID: 9103687755788420203}
   m_Layer: 0
   m_Name: treeCamera
   m_TagString: Untagged
@@ -768,14 +758,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &9103687755788420203
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5449849665261591853}
-  m_Enabled: 1
 --- !u!1 &6668762889394814140
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,7 +921,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3643572153277601784}
   - component: {fileID: 4290407035107038197}
-  - component: {fileID: 3732999006623069511}
   m_Layer: 0
   m_Name: metalCamera
   m_TagString: Untagged
@@ -1004,14 +985,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &3732999006623069511
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7525194884739996257}
-  m_Enabled: 1
 --- !u!1 &7545017152798540569
 GameObject:
   m_ObjectHideFlags: 0
