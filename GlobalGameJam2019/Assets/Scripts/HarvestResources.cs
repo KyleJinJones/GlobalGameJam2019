@@ -36,13 +36,9 @@ public class HarvestResources : MonoBehaviour
         Inventory inventory = other.GetComponent<Inventory>();
 
         if(Input.GetAxisRaw(other.GetComponent<PlayerMovement>().InteractAxis) == 1) {
-            if(inventory.carried != null) {
-                Debug.Log("CANNOT HARVEST ITEM; CURRENTLY CARRYING ITEM");
-            } else {
+            if(inventory.carried == null)  {
                 timer = timer - Time.deltaTime;
-                Debug.Log(timer);
                 if(timer <= 0) {
-                    Debug.Log("ITEM HARVESTED");
                     inventory.carried = Instantiate(rawMaterial, other.transform.position, Quaternion.identity);
                     timer = HARVEST_TIME;
                 }
